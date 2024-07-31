@@ -4,7 +4,7 @@ shell = "/bin/zsh"
 normal = { "family" = "JetBrainsMono Nerd Font", "style" = "regular"}
 
 [window]
-opacity = 0.8
+opacity = 1
 
 # https://raw.githubusercontent.com/catppuccin/alacritty/main/catppuccin-mocha.toml
 
