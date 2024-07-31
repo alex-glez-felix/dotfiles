@@ -1,0 +1,4 @@
+control + space
+	dunstctl close-all
+Print
+	flameshot gui

@@ -1,0 +1,17 @@
+configuration{
+    modi: "run,drun,window";
+    icon-theme: "Papirus";
+    show-icons: true;
+    terminal: "alacritty";
+    drun-display-format: "{icon} {name}";
+    display-drun: "Applications:";
+    display-window: "Windows:";
+    display-combi: "All:";
+    location: 0;
+    disable-history: false;
+    hide-scrollbar: true;
+    sidebar-mode: true;
+}
+
+@theme "catppuccin-mocha"
+
