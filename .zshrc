@@ -33,8 +33,6 @@ source "${ZINIT_HOME}/zinit.zsh"
 . "$HOME/.atuin/bin/env"
 eval "$(atuin init zsh)"
 
-source  "$HOME/.config/commands/aliases.sh"
-
 # fnm
 FNM_PATH="/home/alex/.local/share/fnm"
 if [ -d "$FNM_PATH" ]; then
@@ -56,12 +54,21 @@ zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 
+# Snippets
+zinit snippet OMZP::git
+zinit snippet OMZP::sudo
+zinit snippet OMZP::archlinux
+zinit snippet OMZP::aws
+zinit snippet OMZP::command-not-found
+
 bindkey '^y' autosuggest-accept # ctrl-y to accept suggestion
 bindkey '^p' history-search-backward
 bindkey '^n' history-search-forward
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+mkcd () { mkdir "$1" && cd "$1"; }
 
 # Aliases
 alias vim='nvim'
