@@ -82,6 +82,7 @@ alias lf='eza -f --color=always'
 alias lh='eza -d .* --group-directories-first'
 alias ll='eza -a --group-directories-first'
 alias lt='eza -al --sort=modified'
+alias cl='clear'
 
 export PATH="/home/agonzalez/.local/share/fnm:$PATH"
 eval "`fnm env`"
