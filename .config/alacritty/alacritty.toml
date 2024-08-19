@@ -2,6 +2,7 @@ shell = "/bin/zsh"
 
 [font]
 normal = { "family" = "JetBrainsMono Nerd Font", "style" = "regular"}
+size = 14
 
 [window]
 opacity = 1

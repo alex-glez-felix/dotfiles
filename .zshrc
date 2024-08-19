@@ -14,6 +14,8 @@ if [ ! -d "$ZINIT_HOME" ]; then
    git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 fi
 
+export PATH="/home/agonzalez/.local/bin:$PATH"
+
 # History
 HISTSIZE=5000
 HISTFILE=~/.histfile
@@ -29,9 +31,6 @@ setopt hist_find_no_dups
 
 # Source/Load zinit
 source "${ZINIT_HOME}/zinit.zsh"
-
-. "$HOME/.atuin/bin/env"
-eval "$(atuin init zsh)"
 
 # fnm
 FNM_PATH="/home/alex/.local/share/fnm"
@@ -74,6 +73,9 @@ mkcd () { mkdir "$1" && cd "$1"; }
 alias vim='nvim'
 alias v='nvim'
 
+zinit snippet OMZP::git
+zinit snippet OMZP::sudo
+
 alias ls='eza --grid --icons'
 alias ld='eza -D'
 alias lf='eza -f --color=always'
@@ -81,3 +83,10 @@ alias lh='eza -d .* --group-directories-first'
 alias ll='eza -a --group-directories-first'
 alias lt='eza -al --sort=modified'
 
+export PATH="/home/agonzalez/.local/share/fnm:$PATH"
+eval "`fnm env`"
+
+eval "$(fnm env --use-on-cd)"
+
+PATH=~/.console-ninja/.bin:$PATH
+export PATH="$PATH:/opt/nvim-linux64/bin"
